@@ -5,10 +5,17 @@
 """
 main.py
 """
+import json
+from pprint import pprint
 from bottle import route, run, template, TEMPLATE_PATH
 
-TEMPLATE_PATH.insert(0, '/storage/emulated/0/qpython/projects3/Liwal/views')
+with open('/storage/emulated/0/qpython/repos/Liwal/settings.json') as settings_file:
+				settings = json.load(settings_file)
+
+pprint(settings)
+
+TEMPLATE_PATH.insert(0, settings['root_path'] + 'views')
 
 import controller.home
 
-run(host='10.0.0.57', port=8080)
+run(host=settings['host'], port=settings['port'])
