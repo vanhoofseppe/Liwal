@@ -1,5 +1,7 @@
 # Liwal
 
+# Set up:
+
 Add a settings.json file with the following data:
   - host
   - port
