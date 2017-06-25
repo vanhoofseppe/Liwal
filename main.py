@@ -16,6 +16,7 @@ pprint(settings)
 
 TEMPLATE_PATH.insert(0, settings['root_path'] + 'views')
 
+#import controllers:
 import controller.home
 
 run(host=settings['host'], port=settings['port'])
