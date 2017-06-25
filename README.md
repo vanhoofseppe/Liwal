@@ -2,6 +2,10 @@
 
 # Set up:
 
+Requirements:
+  - bottle
+  - sqlalchemy
+
 Add a settings.json file with the following data:
   - host
   - port
